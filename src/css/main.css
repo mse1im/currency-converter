@@ -14,6 +14,11 @@ main #markets {
   margin: 5rem 0 0 0;
 }
 
+main #markets hr {
+  opacity: 0.3;
+  background-color: #bac9d5;
+}
+
 main #markets h1 {
   font-size: var(--fontlg);
   font-weight: bold;
@@ -32,10 +37,23 @@ main #markets .box {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 2.5rem 0 2.5rem 0;
+}
+
+main #markets .box .flag {
+  width: 43px;
+  height: 30px;
+  border-radius: 5px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 main #markets .box .currency {
   text-align: left;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
 }
 
 main #markets .box .currency h3 {
@@ -61,6 +79,9 @@ main #markets .box .currency small {
 main #markets .box .buy,
 main #markets .box .sale {
   text-align: end;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 main #markets .box .buy .title,
@@ -88,22 +109,138 @@ main #markets .box .sale .total {
 }
 
 main #markets .btn-details {
-  width: 352px;
-  height: 48px;
   background-color: var(--dark);
-  color: white;
   text-align: center;
+  cursor: pointer;
+  width: 100%;
+  height: 48px;
+  border: solid 2px var(--dark);
+  padding: 13px 0 13px 0;
+}
+
+@media screen and (max-width: 991px) {
+  main #markets .btn-details {
+    margin: 3rem 0 0 0;
+  }
+}
+
+main #markets .btn-details a {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.94px;
+}
+
+main #markets .btn-details:hover {
+  background-color: white;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+main #markets .btn-details:hover a {
+  color: var(--dark);
 }
 
 main #markets .btn-all {
-  width: 350px;
-  height: 48px;
-  border: solid 2px;
-  color: var(--dark);
+  border: solid 2px var(--dark);
   text-align: center;
+  cursor: pointer;
+  height: 48px;
+  width: 100%;
+  padding: 13px 0 13px 0;
+}
+
+@media screen and (max-width: 991px) {
+  main #markets .btn-all {
+    margin: 1rem 0 2rem 0;
+  }
+}
+
+main #markets .btn-all a {
+  color: var(--dark);
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.94px;
+}
+
+main #markets .btn-all:hover {
+  background-color: var(--dark);
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+main #markets .btn-all:hover a {
+  color: white;
+}
+
+main #markets .btn-all-mobile {
+  border: none;
+}
+
+main #markets .btn-all-mobile a {
+  font-size: var(--font);
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #markets .btn-all-mobile a img {
+  width: 32px;
+  height: 32px;
 }
 
 main #markets .converter {
-  background: red;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2b3b48), to(#8093a5));
+  background: linear-gradient(180deg, #2b3b48 0%, #8093a5 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 255px;
+  height: 288px;
+}
+
+@media screen and (max-width: 991px) {
+  main #markets .converter {
+    width: 100%;
+  }
+}
+
+main #markets .converter h2 {
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: normal;
+  color: white;
 }
 /*# sourceMappingURL=main.css.map */

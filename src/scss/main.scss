@@ -16,6 +16,11 @@ main {
     #markets {
         margin: 5rem 0 0 0;
 
+        hr {
+            opacity: 0.3;
+            background-color: #bac9d5;
+        }
+
         h1 {
             font-size: var(--fontlg);
             font-weight: bold;
@@ -30,11 +35,18 @@ main {
         .box {
             display: flex;
             justify-content: space-between;
+            margin:2.5rem 0 2.5rem 0;
 
-            .flag {}
+            .flag {
+                width: 43px;
+                height: 30px;
+                border-radius: 5px;
+                flex:1;
+            }
 
             .currency {
                 text-align: left;
+                flex:3;
 
                 h3 {
                     font-size: var(--font);
@@ -60,6 +72,7 @@ main {
             .buy,
             .sale {
                 text-align: end;
+                flex:1;
 
                 .title {
                     font-size: var(--fontsm);
@@ -86,25 +99,114 @@ main {
         }
 
         .btn-details {
-            width: 352px;
-            height: 48px;
             background-color: var(--dark);
-            color: white;
             text-align: center;
+            cursor:pointer;
+            width: 100%;
+            height: 48px;
+            border: solid 2px var(--dark);
+            padding: 13px 0 13px 0;
+
+            @media screen and (max-width: 991px) {
+                margin:3rem 0 0 0;
+            }
+
+            a {
+                color: white;
+                font-size: 15px;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: 0.94px;
+            }
+
+            &:hover {
+                background-color:white;
+                transition: all 0.5s ease-in-out 0s;
+
+                a {
+                    color:var(--dark);
+                }
+            }
         }
 
         .btn-all {
-            width: 350px;
-            height: 48px;
-            border: solid 2px;
-            color: var(--dark);
+            border: solid 2px var(--dark);
             text-align: center;
+            cursor:pointer;
+            height: 48px;
+            width: 100%;
+            padding: 13px 0 13px 0;
+
+            @media screen and (max-width: 991px) {
+                margin:1rem 0 2rem 0;
+            }
+
+            a {
+                color: var(--dark);
+                font-size: 15px;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: 0.94px;
+            }
+
+            &:hover {
+                background-color:var(--dark);
+                transition: all 0.5s ease-in-out 0s;
+
+                a {
+                    color:white
+                }
+            }
+        }
+        
+        .btn-all-mobile {
+            border:none;
+
+            a {
+                font-size: var(--font);
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: 1px;
+                display: flex;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+
+                img {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
         }
 
         .converter {
-            background: red;
+            background: linear-gradient(180deg, rgba(43,59,72,1) 0%, rgba(128,147,165,1) 100%);
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
+            width: 255px;
+            height: 288px;
 
-            h2 {}
+            @media screen and (max-width: 991px) {
+                width: 100%;
+            }
+
+            h2 {
+                font-size: 20px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.7;
+                letter-spacing: normal;
+                color:white;
+            }
 
             .exchange {
 
