@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+}
+
+html,
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.ellipsis {
+    text-overflow: ellipsis;
+}
+
+.clear {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+a:link {
+    text-decoration: none;
+    word-break: break-word;
+}
+
+a:focus {
+    outline: none;
+}
+
+button,
+input {
+    border: none;
+}
+
+button:focus,
+input:focus {
+    outline: none;
+}
+
+ol ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

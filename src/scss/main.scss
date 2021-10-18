@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url("reset.css");
+@import url("bootstrap-grid.min.css");
+
+/* variables */
+
+:root {
+    --dark: #2b3b48;
+    --light: #4f6477;
+    --font: 16px;
+    --fontsm: 12px;
+    --fontlg: 28px;
+}
+
+main {
+    #markets {
+        margin: 5rem 0 0 0;
+
+        h1 {
+            font-size: var(--fontlg);
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.21;
+            letter-spacing: normal;
+            color: var(--dark);
+            margin: 0 76px 38px 1px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: space-between;
+
+            .flag {}
+
+            .currency {
+                text-align: left;
+
+                h3 {
+                    font-size: var(--font);
+                    font-weight: 500;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.25;
+                    letter-spacing: normal;
+                    color: var(--dark);
+                }
+
+                small {
+                    font-size: var(--fontsm);
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 2;
+                    letter-spacing: normal;
+                    color: var(--dark);
+                }
+            }
+
+            .buy,
+            .sale {
+                text-align: end;
+
+                .title {
+                    font-size: var(--fontsm);
+                    font-weight: 500;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    text-align: right;
+                    color: var(--light);
+                }
+
+                .total {
+                    font-size: var(--font);
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.5;
+                    letter-spacing: normal;
+                    text-align: right;
+                    color: var(--dark);
+                }
+            }
+        }
+
+        .btn-details {
+            width: 352px;
+            height: 48px;
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+        }
+
+        .btn-all {
+            width: 350px;
+            height: 48px;
+            border: solid 2px;
+            color: var(--dark);
+            text-align: center;
+        }
+
+        .converter {
+            background: red;
+
+            h2 {}
+
+            .exchange {
+
+                input {}
+            }
+
+            img {}
+
+            .rate {
+                .total {}
+
+                span {}
+            }
+        }
+    }
+}
