@@ -24,44 +24,31 @@ body {
     font-smoothing: antialiased;
 }
 
-.uppercase {
-    text-transform: uppercase;
-}
-
-.ellipsis {
-    text-overflow: ellipsis;
-}
-
-.clear {
-    clear: both;
-}
-
 a {
     text-decoration: none;
-}
 
-a:hover {
-    text-decoration: none;
-    transition: all 0.5s ease-in-out 0s;
-}
+    &:hover {
+        text-decoration: none;
+        transition: all 0.5s ease-in-out 0s;
+    }
 
-a:link {
-    text-decoration: none;
-    word-break: break-word;
-}
+    &:link {
+        text-decoration: none;
+        word-break: break-word;
+    }
 
-a:focus {
-    outline: none;
+    &:focus {
+        outline: none;
+    }
 }
 
 button,
 input {
     border: none;
-}
 
-button:focus,
-input:focus {
-    outline: none;
+    &:focus {
+        outline:none;
+    }
 }
 
 ol ul,
