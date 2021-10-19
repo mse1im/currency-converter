@@ -189,7 +189,7 @@ main #markets .converter .exchange select {
   font-size: 15px;
   font-weight: 600;
   color: var(--dark);
-  margin-right: 0.5rem;
+  margin: 0 0.5rem 0 1.5rem;
 }
 
 main #markets .converter .exchange select:focus-visible {
@@ -216,6 +216,7 @@ main #markets .converter .exchange input {
   font-style: normal;
   letter-spacing: normal;
   color: var(--dark);
+  border-right: 1px solid #eaeef2;
 }
 
 main #markets .converter .exchange input::-webkit-input-placeholder {

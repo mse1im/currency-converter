@@ -158,7 +158,7 @@ main {
                     font-size: 15px;
                     font-weight: 600;
                     color: var(--dark);
-                    margin-right: 0.5rem;
+                    margin:0 0.5rem 0 1.5rem;
 
                     &:focus-visible {
                         outline: none;
@@ -179,6 +179,7 @@ main {
                     font-style: normal;
                     letter-spacing: normal;
                     color: var(--dark);
+                    border-right: 1px solid #eaeef2;
 
                     &::placeholder {
                         font-size: var(--font);
