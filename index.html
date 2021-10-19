@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Piyasalar</title>
     <link rel="stylesheet" href="src/css/main.css">
 </head>
 
@@ -16,7 +16,7 @@
                 <div class="col-12">
                     <h1>Piyasalar</h1>
                     <div class="row">
-                        <div class="col-12 col-lg-4">
+                        <div class="col-12 col-lg-5 box-wrap">
                             <div class="box">
                                 <div class="flag">
                                     <img src="src/img/usd.png" alt="Amerikan Doları">
@@ -27,11 +27,11 @@
                                 </div>
                                 <div class="buy">
                                     <div class="title">ALIŞ</div>
-                                    <div class="total">6.8399</div>
+                                    <div class="total" id="usd-buy"></div>
                                 </div>
                                 <div class="sale">
                                     <div class="title">SATIŞ</div>
-                                    <div class="total">6.8752</div>
+                                    <div class="total" id="usd-sale"></div>
                                 </div>
                             </div>
                             <hr>
@@ -45,11 +45,11 @@
                                 </div>
                                 <div class="buy">
                                     <div class="title">ALIŞ</div>
-                                    <div class="total">7,28830</div>
+                                    <div class="total" id="jpy-buy"></div>
                                 </div>
                                 <div class="sale">
                                     <div class="title">SATIŞ</div>
-                                    <div class="total">7,48830</div>
+                                    <div class="total" id="jpy-sale"></div>
                                 </div>
                             </div>
                             <hr>
@@ -63,18 +63,18 @@
                                 </div>
                                 <div class="buy">
                                     <div class="title">ALIŞ</div>
-                                    <div class="total">1,1520</div>
+                                    <div class="total" id="dkk-buy"></div>
                                 </div>
                                 <div class="sale">
                                     <div class="title">SATIŞ</div>
-                                    <div class="total">1,2520</div>
+                                    <div class="total" id="dkk-sale"></div>
                                 </div>
                             </div>
                             <div class="btn-details mt-5 d-none d-md-none d-lg-block">
                                 <a href="#">Detaylı Bilgi</a>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-4">
+                        <div class="col-12 col-lg-5 box-wrap">
                             <hr class="d-lg-none d-block">
                             <div class="box">
                                 <div class="flag">
@@ -86,11 +86,11 @@
                                 </div>
                                 <div class="buy">
                                     <div class="title">ALIŞ</div>
-                                    <div class="total">6.8399</div>
+                                    <div class="total" id="eur-buy"></div>
                                 </div>
                                 <div class="sale">
                                     <div class="title">SATIŞ</div>
-                                    <div class="total">6.8752</div>
+                                    <div class="total" id="eur-sale"></div>
                                 </div>
                             </div>
                             <hr>
@@ -104,11 +104,11 @@
                                 </div>
                                 <div class="buy">
                                     <div class="title">ALIŞ</div>
-                                    <div class="total">8,5583</div>
+                                    <div class="total" id="gbp-buy"></div>
                                 </div>
                                 <div class="sale">
                                     <div class="title">SATIŞ</div>
-                                    <div class="total">8,5583</div>
+                                    <div class="total" id="gbp-sale"></div>
                                 </div>
                             </div>
                             <hr>
@@ -122,26 +122,34 @@
                                 </div>
                                 <div class="buy">
                                     <div class="title">ALIŞ</div>
-                                    <div class="total">0,8041</div>
+                                    <div class="total" id="nok-buy"></div>
                                 </div>
                                 <div class="sale">
                                     <div class="title">SATIŞ</div>
-                                    <div class="total">0,8041</div>
+                                    <div class="total" id="nok-sale"></div>
                                 </div>
                             </div>
                             <div class="btn-all mt-5 d-none d-md-none d-lg-block">
                                 <a href="#">Tüm Piyasalar</a>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-4">
+                        <div class="col-12 col-lg-2">
                             <div class="converter">
                                 <h2>Döviz Çevir</h2>
                                 <div class="exchange">
-                                    <input id="TRY" type="text" maxlength="16" class="amount" placeholder="0,00">
+                                    <input id="exchange" onkeypress="return isNumberKey(event)" placeholder="0,00">
+                                    <select name="exchange-option" id="exchange-option">
+                                        <option value="EUR">EUR</option>
+                                        <option value="USD">USD</option>
+                                        <option value="JPY">JPY</option>
+                                        <option value="GBP">GBP</option>
+                                        <option value="NOK">NOK</option>
+                                        <option value="DKK">DKK</option>
+                                    </select>
                                 </div>
-                                <img src="" alt="">
+                                <div class="btn-exchange"></div>
                                 <div class="rate">
-                                    <div class="total">2</div>
+                                    <div class="total" id="try-total">0.00</div>
                                     <span>TL</span>
                                 </div>
                             </div>
@@ -153,14 +161,28 @@
                                 </div>
                             </div>
                             <div class="btn-all btn-all-mobile d-block d-lg-none">
-                                <a href="#">Tüm Piyasalar <img src="src/img/icons-32-go.svg" alt="GO"></a>
+                                <a href="#">Tüm Piyasalar
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <g fill="#2B3B48" fill-rule="nonzero">
+                                                <g>
+                                                    <g>
+                                                        <g>
+                                                            <path
+                                                                d="M17.105 9.26c.311-.332.832-.348 1.164-.037l6.588 6.176.022.022c.015.014.029.03.043.046l.03.036.042.063.013.021c.014.024.026.049.038.074l.01.025c.04.097.063.203.063.314 0 .111-.022.217-.062.314l-.011.025c-.012.025-.024.05-.038.074l-.013.02c-.014.023-.028.044-.044.064-.027.036-.058.071-.093.104l.065-.068-.043.047-.022.02-6.588 6.177c-.332.311-.853.295-1.164-.037-.311-.332-.294-.853.038-1.164l5.069-4.753H7.824c-.42 0-.767-.314-.818-.72L7 16c0-.455.369-.824.824-.824H22.21l-5.068-4.752c-.305-.285-.344-.747-.109-1.077z"
+                                                                transform="translate(-236 -966) translate(15 586) translate(102 380) translate(119)" />
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </section>
     </main>
 </body>

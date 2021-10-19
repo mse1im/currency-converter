@@ -30,6 +30,24 @@ main #markets h1 {
   margin: 0 76px 38px 1px;
 }
 
+main #markets .box-wrap {
+  margin-right: 75px;
+  width: 35%;
+}
+
+@media screen and (max-width: 1400px) {
+  main #markets .box-wrap {
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  main #markets .box-wrap {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
 main #markets .box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -51,9 +69,9 @@ main #markets .box .flag {
 
 main #markets .box .currency {
   text-align: left;
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
 
 main #markets .box .currency h3 {
@@ -79,9 +97,9 @@ main #markets .box .currency small {
 main #markets .box .buy,
 main #markets .box .sale {
   text-align: end;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5;
+          flex: 1.5;
 }
 
 main #markets .box .buy .title,
@@ -105,6 +123,166 @@ main #markets .box .sale .total {
   line-height: 1.5;
   letter-spacing: normal;
   text-align: right;
+  color: var(--dark);
+}
+
+main #markets .converter {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2b3b48), to(#8093a5));
+  background: linear-gradient(180deg, #2b3b48 0%, #8093a5 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 255px;
+  height: 288px;
+  position: relative;
+}
+
+@media screen and (max-width: 991px) {
+  main #markets .converter {
+    width: 100%;
+  }
+}
+
+main #markets .converter h2 {
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: normal;
+  color: white;
+}
+
+main #markets .converter .btn-exchange {
+  background-image: url("/src/img/buttons-change.svg");
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 50%;
+  background-repeat: no-repeat;
+}
+
+main #markets .converter .exchange {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 81%;
+  background-color: white;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+main #markets .converter .exchange select {
+  border: none;
+  padding: 0 2rem 0 0rem;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dark);
+  margin-right: 0.5rem;
+}
+
+main #markets .converter .exchange select:focus-visible {
+  outline: none;
+}
+
+main #markets .converter .exchange input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 2rem 0 2rem;
+  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 48px;
+  width: 100%;
+  font-size: var(--font);
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+main #markets .converter .exchange input::-webkit-input-placeholder {
+  font-size: var(--font);
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+main #markets .converter .exchange input:-ms-input-placeholder {
+  font-size: var(--font);
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+main #markets .converter .exchange input::-ms-input-placeholder {
+  font-size: var(--font);
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+main #markets .converter .exchange input::placeholder {
+  font-size: var(--font);
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+main #markets .converter .rate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 2rem 0 2rem;
+  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 81%;
+  height: 48px;
+  margin-bottom: 15px;
+}
+
+main #markets .converter .rate .total,
+main #markets .converter .rate span {
+  font-size: var(--font);
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
   color: var(--dark);
 }
 
@@ -183,6 +361,15 @@ main #markets .btn-all-mobile {
   border: none;
 }
 
+main #markets .btn-all-mobile:hover {
+  background-color: white;
+}
+
+main #markets .btn-all-mobile:hover a {
+  color: var(--dark);
+  opacity: 0.7;
+}
+
 main #markets .btn-all-mobile a {
   font-size: var(--font);
   font-weight: 500;
@@ -203,44 +390,9 @@ main #markets .btn-all-mobile a {
           justify-content: center;
 }
 
-main #markets .btn-all-mobile a img {
+main #markets .btn-all-mobile a svg {
   width: 32px;
   height: 32px;
-}
-
-main #markets .converter {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2b3b48), to(#8093a5));
-  background: linear-gradient(180deg, #2b3b48 0%, #8093a5 100%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 255px;
-  height: 288px;
-}
-
-@media screen and (max-width: 991px) {
-  main #markets .converter {
-    width: 100%;
-  }
-}
-
-main #markets .converter h2 {
-  font-size: 20px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.7;
-  letter-spacing: normal;
-  color: white;
+  fill: var(--dark);
 }
 /*# sourceMappingURL=main.css.map */
