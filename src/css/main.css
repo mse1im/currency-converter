@@ -127,8 +127,7 @@ main #markets .box .sale .total {
 }
 
 main #markets .converter {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2b3b48), to(#8093a5));
-  background: linear-gradient(180deg, #2b3b48 0%, #8093a5 100%);
+  background: linear-gradient(135deg, #2b3b48 34%, #8093a5 110%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
